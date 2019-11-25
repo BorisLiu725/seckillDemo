@@ -1,0 +1,30 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: spekillDemo
+  datasource:
+    url: jdbc:mysql://localhost:3306/seckilldemo?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&verifyServerCertificate=false&useSSL=false&allowMultiQueries=true
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+  redis:
+    host: 127.0.0.1
+
+  rabbitmq:
+    host: 127.0.0.1
+    username: sekill
+    password: 123456
+    port: 5672
+    virtual-host: /spike
+
+
+# mybatis 配置
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  type-aliases-package: com.ly.seckill.bean
+  configuration:
+    map-underscore-to-camel-case: true
+
+
